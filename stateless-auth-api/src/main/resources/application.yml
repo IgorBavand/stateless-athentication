@@ -1,0 +1,27 @@
+server:
+  port: ${PORT:8083}
+
+app:
+  token:
+    secret-key: aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==aWdvcmJhdmFuZA==
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 12345678
+    initalization-mode: always
+    initialize: true
+    continue-on-error: true
+    platform: postgresql
+    maxActive: 3
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      format-sql: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
